@@ -4,7 +4,7 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     const withdrawValue = document.getElementById('user-withdraw');
     const withdrawvalues = withdrawValue.value;
     const userW = parseFloat(withdrawvalues);
-    withdrawValue.value = '';
+    
     // console.log(`user given value is ${withdrawvalues}`);
 
     // get default withdraw value 
@@ -12,8 +12,7 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     const lastWithdraw = currentWithdraw.innerText;
     const finalW = parseFloat(lastWithdraw);
 
-    const totalWithdraw = finalW+userW;
-    currentWithdraw.innerText = totalWithdraw;
+  
     
     
 
@@ -24,16 +23,18 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     const totalValue = currentTotal.innerText;
     const changeT = parseFloat(totalValue);
 
+    if(userW>changeT || isNaN(userW)){
+        alert("insufficient Balance in your Account or worng input.")
+        return;
+    }
+
+    const totalWithdraw = finalW+userW;
+    currentWithdraw.innerText = totalWithdraw;
+
     const finalBalance = changeT- userW;
     
     currentTotal.innerText = finalBalance;
-    
-    
-    
- 
-
-
-    
-    
+    // clear the input field 
+    withdrawValue.value = '';
     
 })
