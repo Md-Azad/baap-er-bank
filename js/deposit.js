@@ -14,6 +14,8 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
     const currentValue = document.getElementById('previous-balance');
     const currentBalance = currentValue.innerText;
     const updatedBalance = parseFloat(deposit) + parseFloat(currentBalance);
-    currentValue.innerText = updatedBalance;
+    currentValue.innerText = parseFloat(updatedBalance);
+    
+    
 })
 
