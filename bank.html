@@ -19,7 +19,9 @@
         <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
           <div class="bg-sky-700 rounded">
             <h3 class="font-semibold pl-3 pt-3">Deposit</h3>
-            <h2 class="font-bold pl-3 pb-3 text-3xl">$00</h2>
+            <h2 class="font-bold pl-3 pb-3 text-3xl">
+              $<span id="total-deposit">00</span>
+            </h2>
           </div>
           <div class="bg-amber-700 rounded">
             <h3 class="font-semibold pl-3 pt-3">Withdraw</h3>
@@ -27,15 +29,17 @@
           </div>
           <div class="bg-lime-600 rounded">
             <h3 class="font-semibold pl-3 pt-3">Balance</h3>
-            <h2 class="font-bold pl-3 pb-3 text-3xl">$1240</h2>
+            <h2 class="font-bold pl-3 pb-3 text-3xl">
+              $ <span id="previous-balance">1240</span>
+            </h2>
           </div>
         </div>
       </section>
       <section class="mt-6">
-        <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">
+        <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
           <!-- Deposit -->
           <div class="bg-teal-500 rounded-lg">
-            <h3 class="font-semibold pl-4 pt-3">Please Deposit</h3>
+            <h3 class="font-semibold pl-4 pt-3 text-white">Please Deposit</h3>
             <input
               class="ml-4 w-9/12 block pl-3 text-xs mt-3"
               type="text"
@@ -47,12 +51,12 @@
               id="btn-deposit"
               class="ml-4 bg-amber-400 hover:bg-sky-700 my-4 px-4 py-1 rounded text-white font-bold"
             >
-              Login
+              Deposit
             </button>
           </div>
           <!-- withdraw -->
           <div class="bg-green-300 rounded-lg">
-            <h3 class="font-semibold pl-4 pt-3">Please Withdraw</h3>
+            <h3 class="font-semibold pl-4 pt-3 text-white">Please Withdraw</h3>
             <input
               class="ml-4 w-9/12 block pl-3 text-xs mt-3"
               type="text"
@@ -61,14 +65,17 @@
             />
 
             <button
-              id="btn-submit"
+              id="btn-withdraw"
               class="ml-4 bg-amber-400 hover:bg-sky-700 my-4 px-4 py-1 rounded text-white font-bold"
             >
-              Login
+              Withdraw
             </button>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
   </body>
 </html>
